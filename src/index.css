@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Fraunces", "Noto Naskh Arabic", serif;
+  --font-body: "Inter", "Vazirmatn", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-ink: #070708;
+  --color-ink-2: #0f0f12;
+  --color-surface: #131316;
+  --color-surface-2: #1b1b1f;
+  --color-border-dark: #2a2a30;
+  --color-chrome: #f4f4f2;
+  --color-chrome-soft: #c9c9ce;
+  --color-lime: #baff5e;
+  --color-teal: #7de0d3;
+  --color-cream: #f6f5f2;
+  --color-ink-text: #101012;
+}
+
+:root {
+  color-scheme: light;
+}
+:root.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-cream);
+  color: var(--color-ink-text);
+  transition: background-color .3s ease, color .3s ease;
+}
+
+html.dark body {
+  background: var(--color-ink);
+  color: #eceae4;
+}
+
+html[dir="rtl"] body {
+  font-family: "Vazirmatn", var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: var(--color-chrome);
+  color: #0a0b0f;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+.font-mono-num {
+  font-family: var(--font-mono);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-dark);
+  border-radius: 999px;
+}
