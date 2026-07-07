@@ -118,7 +118,7 @@ export function DashboardLayout() {
         <header className="flex h-16 items-center justify-between border-b border-black/[0.06] px-5 lg:hidden dark:border-white/[0.08]">
           <div className="flex items-center gap-2 font-display text-lg font-semibold">
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-chrome text-sm text-ink">L</span>
-            Lingova
+              Ellara Academy
           </div>
           <button onClick={() => setMobileOpen(true)} aria-label="Open menu">
             <Menu size={22} />

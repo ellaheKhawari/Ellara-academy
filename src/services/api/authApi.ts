@@ -6,7 +6,7 @@ interface StoredUser extends User {
   password: string;
 }
 
-const DB_KEY = "lingova-mock-db";
+const DB_KEY = "Ellara-mock-db";
 
 function loadDb(): StoredUser[] {
   const raw = window.localStorage.getItem(DB_KEY);
@@ -21,7 +21,7 @@ function loadDb(): StoredUser[] {
     {
       id: "u_demo",
       fullName: "Demo Student",
-      email: "demo@lingova.com",
+      email: "demo@Ellara.com",
       password: "demo1234",
       avatarUrl: "https://i.pravatar.cc/150?img=12",
       language: "es",

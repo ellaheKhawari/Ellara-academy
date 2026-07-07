@@ -13,7 +13,7 @@ export function LoginPage() {
   const login = useLogin();
 
   const form = useForm({
-    defaultValues: { email: "demo@lingova.com", password: "demo1234" },
+    defaultValues: { email: "demo@Ellara-academy.com", password: "demo1234" },
     onSubmit: async ({ value }) => {
       try {
         await login.mutateAsync(value);
@@ -75,7 +75,7 @@ export function LoginPage() {
         </Button>
 
         <p className="text-xs text-current/40">
-          Demo account — email: <span className="font-mono-num">demo@lingova.com</span>, password:{" "}
+          Demo account — email: <span className="font-mono-num">demo@Ellara.com</span>, password:{" "}
           <span className="font-mono-num">demo1234</span>
         </p>
       </form>

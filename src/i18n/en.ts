@@ -13,7 +13,7 @@ const en = {
     eyebrow: "5 languages · live instructors · real progress",
     title: "Speak a new language with real confidence",
     subtitle:
-      "Lingova pairs you with expert instructors across English, Chinese, Korean, Spanish and Persian — structured courses, live sessions, and a dashboard that shows you exactly how far you've come.",
+      "Ellara Academy pairs you with expert instructors across English, Chinese, Korean, Spanish and Persian — structured courses, live sessions, and a dashboard that shows you exactly how far you've come.",
     cta: "Explore Courses",
     ctaSecondary: "Watch a Sample Session",
     stat1: "12.4k",
@@ -75,7 +75,7 @@ const en = {
   charts: {
     eyebrow: "By the Numbers",
     title: "Progress you can actually see",
-    subtitle: "A look at how Lingova students grow over a typical 12-week term.",
+    subtitle: "A look at how Ellara Academy students grow over a typical 12-week term.",
     fluency: "Average Fluency Score",
     retention: "Weekly Retention",
     hours: "Hours studied per week",
@@ -87,8 +87,8 @@ const en = {
     a1: "Yes — every new student gets one full week of live sessions and dashboard access at no cost, no card required.",
     q2: "How is the pricing structured?",
     a2: "Pricing is per language track, billed monthly. Group sessions and 1:1 sessions are priced separately, and you can switch between them anytime.",
-    q3: "Can I combine Lingova with other course materials?",
-    a3: "Absolutely. Many students use Lingova's live sessions alongside their own textbooks or apps — your instructor can adapt around what you're already using.",
+    q3: "Can I combine Ellara Academy with other course materials?",
+    a3: "Absolutely. Many students use Ellara Academy's live sessions alongside their own textbooks or apps — your instructor can adapt around what you're already using.",
     q4: "Is there a limit on the number of users or projects for each plan?",
     a4: "Individual plans cover one learner. Family and team plans support up to 6 learners with shared billing and separate dashboards for each.",
   },

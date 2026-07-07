@@ -30,7 +30,7 @@ export function Header() {
           <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-sm text-chrome-soft dark:bg-chrome dark:text-ink">
             L
           </span>
-          Lingova
+            Ellara Academy
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

@@ -13,7 +13,7 @@ export function Footer() {
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-sm text-chrome-soft dark:bg-chrome dark:text-ink">
                 L
               </span>
-              Lingova
+                Ellara Academy
             </div>
             <p className="mt-3 max-w-xs text-sm text-current/60">{t.footer.tagline}</p>
           </div>
@@ -42,7 +42,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-black/[0.06] pt-6 text-xs text-current/50 md:flex-row dark:border-white/[0.06]">
-          <span>© {year} Lingova. {t.footer.rights}</span>
+          <span>© {year} Ellara Academy. {t.footer.rights}</span>
         </div>
       </div>
     </footer>

@@ -17,7 +17,7 @@ export function AuthLayout({ children, title, subtitle }: { children: ReactNode;
         />
         <Link to="/" className="relative z-10 flex items-center gap-2 font-display text-xl font-semibold">
           <span className="flex h-8 w-8 items-center justify-center rounded-full bg-chrome text-sm text-ink">L</span>
-          Lingova
+          Ellara Academy
         </Link>
 
         <div className="relative z-10 max-w-sm">
@@ -43,7 +43,7 @@ export function AuthLayout({ children, title, subtitle }: { children: ReactNode;
           </div>
         </div>
 
-        <p className="relative z-10 text-xs text-white/30">© {new Date().getFullYear()} Lingova</p>
+        <p className="relative z-10 text-xs text-white/30">© {new Date().getFullYear()} Ellara Academy</p>
       </div>
 
       <div className="flex items-center justify-center px-6 py-12 sm:px-10">
@@ -57,7 +57,7 @@ export function AuthLayout({ children, title, subtitle }: { children: ReactNode;
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-sm text-chrome-soft">
               L
             </span>
-            Lingova
+              Ellara Academy
           </Link>
           <h1 className="font-display text-2xl font-semibold">{title}</h1>
           <p className="mt-2 text-sm text-current/60">{subtitle}</p>

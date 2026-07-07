@@ -36,7 +36,7 @@ export function RegisterPage() {
       }
       try {
         await register.mutateAsync(value);
-        toast.success("Account created — welcome to Lingova!");
+        toast.success("Account created — welcome to Ellara Academy!");
         navigate("/dashboard");
       } catch (err) {
         toast.error(err instanceof Error ? err.message : "Something went wrong.");
