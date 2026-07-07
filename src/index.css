@@ -12,14 +12,25 @@
     url('public/fonts/ttf/IRAN-Rounded.ttf') format('truetype');
     font-display: swap;
 }
+@font-face {
+    font-family: IranYekan;
+    font-style: normal;
+    font-weight: 900;
+    src: url('public/fonts/iranyekan/eot/iranyekanwebregular.eot');
+    src: url('public/fonts/iranyekan/woff2/iranyekanwebregular.woff2') format('woff2'),
+    url('public/fonts/iranyekan/woff/iranyekanwebregular.woff') format('woff'),
+    url('public/fonts/iranyekan/ttf/iranyekanwebregular.ttf') format('truetype');
+    font-display: swap;
+}
 
 @theme {
     --font-display: "Fraunces", serif;
     --font-display-fa: "IRANRounded", serif;
-    --font-body: "Inter", system-ui, sans-serif;
-    --font-mono: "JetBrains Mono","IRANRounded" ui-monospace, monospace;
+    --font-body: "Inter","Iranyekan", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono","Iranyekan", ui-monospace, monospace;
 
     --color-ink: #070708;
+    --color-primary: #6e7076;
     --color-ink-2: #0f0f12;
     --color-surface: #131316;
     --color-surface-2: #1b1b1f;
@@ -58,6 +69,10 @@ html.dark body {
 
 .font-display {
     font-family: var(--font-display);
+}
+
+.font-constant {
+    font-family: var(--font-display) !important;
 }
 
 html[dir="rtl"] .font-display {

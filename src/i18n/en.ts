@@ -92,13 +92,21 @@ const en = {
     q4: "Is there a limit on the number of users or projects for each plan?",
     a4: "Individual plans cover one learner. Family and team plans support up to 6 learners with shared billing and separate dashboards for each.",
   },
-  footer: {
-    tagline: "Real instructors. Real conversations. Real progress.",
-    rights: "All rights reserved.",
-    company: "Company",
-    resources: "Resources",
-    legal: "Legal",
-  },
+    footer: {
+        tagline: "Real instructors. Real conversations. Real progress.",
+        rights: "All rights reserved.",
+        company: "Company",
+        resources: "Resources",
+        legal: "Legal",
+        about: "About",
+        careers: "Careers",
+        blog: "Blog",
+        courses: "Courses",
+        teachers: "Teachers",
+        helpCenter: "Help center",
+        privacy: "Privacy",
+        terms: "Terms",
+    },
   auth: {
     loginTitle: "Welcome back",
     loginSubtitle: "Log in to continue your learning streak.",
@@ -143,6 +151,7 @@ const en = {
   },
   loading: "Preparing your lesson…",
 };
+
 
 export default en;
 export type Dictionary = typeof en;

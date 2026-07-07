@@ -24,18 +24,18 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-black/[0.06] bg-cream/80 backdrop-blur-lg dark:border-white/[0.06] dark:bg-ink/80">
+    <header className="sticky top-0 z-50  bg-cream/40 backdrop-blur-lg dark:border-white/[0.06] dark:bg-ink/40">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
-        <Link to="/" className="flex items-center gap-2 font-display text-xl font-semibold">
+        <Link to="/" className="flex items-center gap-2 font-constant text-base lg:text-xl font-semibold">
           <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-sm text-chrome-soft dark:bg-chrome dark:text-ink">
-            L
+            E
           </span>
             Ellara Academy
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-current/70 transition hover:text-ink dark:text-chrome">
+            <a key={l.href} href={l.href} className="text-sm font-medium text-current/70 transition  dark:text-chrome">
               {l.label}
             </a>
           ))}
@@ -45,7 +45,7 @@ export function Header() {
           <button
             aria-label="Toggle language"
             onClick={toggleLocale}
-            className="flex h-9 items-center gap-1.5 rounded-full border border-black/10 px-3 text-xs font-semibold uppercase tracking-wide transition hover:bg-black/5 dark:border-white/10 dark:hover:bg-white/10"
+            className="flex h-9 items-center gap-1.5 rounded-full border font-constant border-black/10 px-3 text-xs font-semibold uppercase tracking-wide transition hover:bg-black/5 dark:border-white/10 dark:hover:bg-white/10"
           >
             <Languages size={14} />
             {locale === "en" ? "FA" : "EN"}
@@ -97,7 +97,7 @@ export function Header() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className={cn("rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/10")}
+                  className={cn("rounded-lg px-3 py-2.5 text-sm ")}
                 >
                   {l.label}
                 </a>

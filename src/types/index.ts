@@ -24,3 +24,7 @@ export interface AuthResponse {
   user: User;
   token: string;
 }
+
+export interface Links{
+
+}

@@ -186,7 +186,7 @@ export function GlassGlobe() {
             <canvas ref={canvasRef} className="absolute inset-0 rounded-full" />
 
             <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center">
-                <span className="font-display text-xl font-semibold text-white drop-shadow-lg">Ellara Academy</span>
+                <span className="font-constant text-xl font-semibold text-white drop-shadow-lg">Ellara Academy</span>
                 <span className="mt-0.5 text-[10px] uppercase tracking-[0.2em] text-white/45">5 Languages, 1 World</span>
             </div>
         </div>
