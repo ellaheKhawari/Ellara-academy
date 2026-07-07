@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-import { useLanguage } from "@/i18n/LanguageProvider";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { Input, Label } from "@/components/ui/Input";
-import { Button } from "@/components/ui/Button";
-import { courses } from "@/lib/mockData";
+import { useLanguage } from "@/i18n/LanguageProvider.tsx";
+import { ScrollReveal } from "@/components/ui/ScrollReveal.tsx";
+import { Input, Label } from "@/components/ui/Input.tsx";
+import { Button } from "@/components/ui/Button.tsx";
+import { courses } from "@/lib/mockData.ts";
 
 export function SignupSection() {
   const { t } = useLanguage();

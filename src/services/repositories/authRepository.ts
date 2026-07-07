@@ -1,6 +1,6 @@
 import Cookies from "js-cookie";
 import { authApi } from "@/services/api/authApi";
-import type { LoginPayload, RegisterPayload, User } from "@/types/auth";
+import type { LoginPayload, RegisterPayload, User } from "@/types";
 
 const TOKEN_COOKIE = "lingova_token";
 

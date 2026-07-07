@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
-import { useLanguage } from "@/i18n/LanguageProvider";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { reviews } from "@/lib/mockData";
+import { useLanguage } from "@/i18n/LanguageProvider.tsx";
+import { ScrollReveal } from "@/components/ui/ScrollReveal.tsx";
+import { reviews } from "@/lib/mockData.ts";
 
 export function ReviewsSection() {
   const { t, dir } = useLanguage();

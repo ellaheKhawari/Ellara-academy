@@ -1,6 +1,6 @@
-import { useLanguage } from "@/i18n/LanguageProvider";
-import { ScrollReveal, StaggerGroup, StaggerItem } from "@/components/ui/ScrollReveal";
-import { teachers } from "@/lib/mockData";
+import { useLanguage } from "@/i18n/LanguageProvider.tsx";
+import { ScrollReveal, StaggerGroup, StaggerItem } from "@/components/ui/ScrollReveal.tsx";
+import { teachers } from "@/lib/mockData.ts";
 
 export function TeachersSection() {
   const { t } = useLanguage();

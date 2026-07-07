@@ -1,4 +1,4 @@
-import type { AuthResponse, LoginPayload, RegisterPayload, User } from "@/types/auth";
+import type { AuthResponse, LoginPayload, RegisterPayload, User } from "@/types";
 
 // --- Mock "database" -------------------------------------------------------
 

@@ -12,9 +12,9 @@ import {
   PolarAngleAxis,
   Radar,
 } from "recharts";
-import { useLanguage } from "@/i18n/LanguageProvider";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { weeklyProgress, hoursStudied, skillBreakdown } from "@/lib/mockData";
+import { useLanguage } from "@/i18n/LanguageProvider.tsx";
+import { ScrollReveal } from "@/components/ui/ScrollReveal.tsx";
+import { weeklyProgress, hoursStudied, skillBreakdown } from "@/lib/mockData.ts";
 
 const tooltipStyle = {
   background: "#171a23",

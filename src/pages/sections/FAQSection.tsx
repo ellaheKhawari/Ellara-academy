@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useLanguage } from "@/i18n/LanguageProvider";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { useLanguage } from "@/i18n/LanguageProvider.tsx";
+import { ScrollReveal } from "@/components/ui/ScrollReveal.tsx";
 
 export function FAQSection() {
   const { t } = useLanguage();

@@ -1,14 +1,14 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Hero } from "@/components/sections/Hero";
-import { CoursesSection } from "@/components/sections/CoursesSection";
-import { PanelSection } from "@/components/sections/PanelSection";
-import { SessionsSection } from "@/components/sections/SessionsSection";
-import { SignupSection } from "@/components/sections/SignupSection";
-import { ReviewsSection } from "@/components/sections/ReviewsSection";
-import { TeachersSection } from "@/components/sections/TeachersSection";
-import { ChartsSection } from "@/components/sections/ChartsSection";
-import { FAQSection } from "@/components/sections/FAQSection";
+import { Hero } from "@/pages/hero/Hero.tsx";
+import { CoursesSection } from "@/pages/sections/CoursesSection";
+import { PanelSection } from "@/pages/sections/PanelSection";
+import { SessionsSection } from "@/pages/sections/SessionsSection";
+import { SignupSection } from "@/pages/sections/SignupSection";
+import { ReviewsSection } from "@/pages/sections/ReviewsSection";
+import { TeachersSection } from "@/pages/sections/TeachersSection";
+import { ChartsSection } from "@/pages/sections/ChartsSection";
+import { FAQSection } from "@/pages/sections/FAQSection";
 
 export function LandingPage() {
   return (

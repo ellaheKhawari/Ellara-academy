@@ -1,8 +1,8 @@
 import { BarChart3, Clapperboard, ListChecks } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { useLanguage } from "@/i18n/LanguageProvider";
-import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { Button } from "@/components/ui/Button";
+import { useLanguage } from "@/i18n/LanguageProvider.tsx";
+import { ScrollReveal } from "@/components/ui/ScrollReveal.tsx";
+import { Button } from "@/components/ui/Button.tsx";
 
 export function PanelSection() {
   const { t } = useLanguage();

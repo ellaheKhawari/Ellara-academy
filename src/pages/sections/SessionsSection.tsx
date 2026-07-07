@@ -1,7 +1,7 @@
 import { Play } from "lucide-react";
-import { useLanguage } from "@/i18n/LanguageProvider";
-import { ScrollReveal, StaggerGroup, StaggerItem } from "@/components/ui/ScrollReveal";
-import { sampleSessions } from "@/lib/mockData";
+import { useLanguage } from "@/i18n/LanguageProvider.tsx";
+import { ScrollReveal, StaggerGroup, StaggerItem } from "@/components/ui/ScrollReveal.tsx";
+import { sampleSessions } from "@/lib/mockData.ts";
 
 export function SessionsSection() {
   const { t } = useLanguage();
