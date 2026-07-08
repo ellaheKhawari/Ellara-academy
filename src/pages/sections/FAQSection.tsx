@@ -26,7 +26,7 @@ export function FAQSection() {
         <div className="space-y-3">
           {items.map((item, i) => (
             <ScrollReveal key={item.q} delay={0.05 * i}>
-              <div className="overflow-hidden rounded-2xl border border-black/[0.06] bg-white/60 dark:border-white/[0.08] dark:bg-white/[0.03]">
+              <div className="overflow-hidden rounded-2xl border border-black/[0.06] bg-secondary dark:border-white/[0.08] dark:bg-white/[0.03]">
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-start"

@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import {useLanguage} from "@/i18n/LanguageProvider.tsx";
 
 const LANDMASSES: Array<{ latMin: number; latMax: number; lngMin: number; lngMax: number }> = [
     { latMin: 15, latMax: 72, lngMin: -170, lngMax: -52 },
@@ -59,7 +60,6 @@ function buildGridRings(): Array<{ x: number; y: number; z: number }[]> {
         }
         rings.push(ring);
     }
-    // چند نصف‌النهار (خطوط طول)
     for (const lng of [0, 45, 90, 135]) {
         const ring: { x: number; y: number; z: number }[] = [];
         for (let i = 0; i <= steps; i++) {
@@ -71,6 +71,24 @@ function buildGridRings(): Array<{ x: number; y: number; z: number }[]> {
     return rings;
 }
 
+function useIsDarkMode() {
+    const [isDark, setIsDark] = useState(
+        () => typeof document !== "undefined" && document.documentElement.classList.contains("dark")
+    );
+
+    useEffect(() => {
+        const root = document.documentElement;
+        const update = () => setIsDark(root.classList.contains("dark"));
+        update();
+
+        const observer = new MutationObserver(update);
+        observer.observe(root, { attributes: true, attributeFilter: ["class"] });
+        return () => observer.disconnect();
+    }, []);
+
+    return isDark;
+}
+
 export function GlassGlobe() {
     const containerRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -78,6 +96,10 @@ export function GlassGlobe() {
 
     const unitDots = useContinentUnitDots(2600);
     const gridRings = useMemo(() => buildGridRings(), []);
+    const { t } = useLanguage();
+    const isDark = useIsDarkMode();
+    const isDarkRef = useRef(isDark);
+    isDarkRef.current = isDark;
 
     useEffect(() => {
         const container = containerRef.current;
@@ -114,6 +136,12 @@ export function GlassGlobe() {
             const cx = width / 2;
             const cy = height / 2;
 
+            const dark = isDarkRef.current;
+            const gridStroke = dark ? "rgba(201,201,206,0.14)" : "rgba(20,20,21,0.16)";
+            const dotBase = dark ? [244, 244, 248] : [16, 16, 18];
+            const dotAlphaMin = dark ? 0.12 : 0.1;
+            const dotAlphaRange = dark ? 0.55 : 0.62;
+
             for (const ring of gridRings) {
                 ctx.beginPath();
                 ring.forEach((v, i) => {
@@ -123,7 +151,7 @@ export function GlassGlobe() {
                     if (i === 0) ctx.moveTo(x, y);
                     else ctx.lineTo(x, y);
                 });
-                ctx.strokeStyle = "rgba(201,201,206,0.14)";
+                ctx.strokeStyle = gridStroke;
                 ctx.lineWidth = 1;
                 ctx.stroke();
             }
@@ -135,7 +163,8 @@ export function GlassGlobe() {
                 const y = cy + r.y * radius;
                 ctx.beginPath();
                 ctx.arc(x, y, 1.3, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(244,244,248,${0.12 + depth * 0.55})`;
+                const alpha = dotAlphaMin + depth * dotAlphaRange;
+                ctx.fillStyle = `rgba(${dotBase[0]},${dotBase[1]},${dotBase[2]},${alpha})`;
                 ctx.fill();
             }
 
@@ -156,38 +185,70 @@ export function GlassGlobe() {
             style={{ perspective: "1400px" }}
         >
             <div
-                className="pointer-events-none absolute -inset-12 rounded-full opacity-50 blur-3xl"
-                style={{ background: "radial-gradient(circle, rgba(201,201,206,0.35), transparent 70%)" }}
+                className="pointer-events-none absolute -inset-[18%] rounded-full"
+                style={{
+                    background: isDark
+                        ? "radial-gradient(circle, rgba(7,7,8,0.9) 0%, rgba(7,7,8,0.3) 47%, rgba(7,7,8,0) 55%)"
+                        : "radial-gradient(circle, rgba(20,20,21,0.16) 0%, rgba(20,20,21,0.2) 47%, rgba(20,20,21,0) 58%)",
+                }}
             />
+
+            <div
+                className="pointer-events-none absolute -inset-12 rounded-full opacity-50 blur-3xl"
+                style={{
+                    background: isDark
+                        ? "radial-gradient(circle, rgba(201,201,206,0.35), transparent 70%)"
+                        : "radial-gradient(circle, rgba(60,62,68,0.4), transparent 70%)",
+                }}
+            />
+            {!isDark && (
+                <div
+                    className="pointer-events-none absolute -inset-6 rounded-full opacity-60 blur-2xl"
+                    style={{ background: "radial-gradient(circle at 50% 60%, rgba(20,20,21,0.22), transparent 68%)" }}
+                />
+            )}
 
             <div
                 className="pointer-events-none absolute -inset-3 animate-[spin_14s_linear_infinite] rounded-full opacity-70"
                 style={{
-                    background:
-                        "conic-gradient(from 0deg, transparent 0%, rgba(255,255,255,0.5) 8%, transparent 18%, transparent 100%)",
+                    background: isDark
+                        ? "conic-gradient(from 0deg, transparent 0%, rgba(169 ,169 ,169 ,0.5) 8%, transparent 18%, transparent 100%)"
+                        : "conic-gradient(from 0deg, transparent 0%, rgba(20,20,21,0.28) 4%, rgba(255,255,255,1) 9%, transparent 20%, transparent 100%)",
                     filter: "blur(6px)",
                 }}
             />
-
             <div
-                className="absolute inset-0 rounded-full border border-white/20"
+                className="absolute inset-0 rounded-full border"
                 style={{
-                    background:
-                        "radial-gradient(circle at 30% 26%, rgba(255,255,255,0.55), rgba(201,201,206,0.12) 40%, rgba(10,10,12,0.25) 78%)",
-                    boxShadow:
-                        "inset 0 0 60px rgba(255,255,255,0.12), inset -10px -30px 70px rgba(0,0,0,0.55), inset 20px 20px 40px rgba(255,255,255,0.06), 0 40px 90px -25px rgba(0,0,0,0.6)",
+                    borderColor: isDark ? "rgba(237 ,237 ,237 ,0.2)" : "rgba(20,20,21,0.12)",
+                    background: isDark
+                        ? "radial-gradient(circle at 30% 26%, rgba(237 ,237 ,237 ,0.55), rgba(201,201,206,0.12) 40%, rgba(10,10,12,0.25) 78%)"
+                        : "radial-gradient(circle at 30% 26%, rgba(237 ,237 ,237 ,0.95), rgba(237 ,237 ,237 ,0.5) 40%, rgba(201,201,206,0.35) 78%)",
+                    boxShadow: isDark
+                        ? "inset 0 0 60px rgba(237 ,237 ,237 ,0.12), inset -10px -30px 70px rgba(0,0,0,0.55), inset 20px 20px 40px rgba(237 ,237 ,237 ,0.06), 0 40px 90px -25px rgba(0,0,0,0.6)"
+                        : "inset 0 0 50px rgba(237 ,237 ,237 ,0.6), inset -10px -30px 50px rgba(20,20,21,0.1), inset 20px 20px 40px rgba(237 ,237 ,237 ,0.5), 0 30px 70px -25px rgba(20,20,21,0.25)",
                 }}
             />
             <div
                 className="pointer-events-none absolute left-[12%] top-[10%] h-[30%] w-[30%] rounded-full opacity-70 blur-md"
-                style={{ background: "radial-gradient(circle, rgba(255,255,255,0.85), transparent 70%)" }}
+                style={{ background: "radial-gradient(circle, rgba(237 ,237 ,237 ,0.85), transparent 70%)" }}
             />
 
             <canvas ref={canvasRef} className="absolute inset-0 rounded-full" />
 
             <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center">
-                <span className="font-constant text-xl font-semibold text-white drop-shadow-lg">Ellara Academy</span>
-                <span className="mt-0.5 text-[10px] uppercase tracking-[0.2em] text-white/45">5 Languages, 1 World</span>
+                <span
+                    className="font-constant text-xl font-semibold drop-shadow-lg"
+                    style={{ color: isDark ? "#ededed" : "#141415" }}
+                >
+                    Ellara Academy
+                </span>
+                <span
+                    className="mt-0.5 text-[10px] uppercase tracking-[0.2em]"
+                    style={{ color: isDark ? "rgba(237 ,237 ,237 ,0.45)" : "rgba(20,20,21,0.5)" }}
+                >
+                    {t.glassGlobal.label}
+                </span>
             </div>
         </div>
     );

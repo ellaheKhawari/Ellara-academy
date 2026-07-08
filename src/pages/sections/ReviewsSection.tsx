@@ -30,13 +30,13 @@ export function ReviewsSection() {
           <div className="flex gap-2">
             <button
               onClick={scrollPrev}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
             >
               <ChevronLeft size={16} />
             </button>
             <button
               onClick={scrollNext}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 hover:bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-black/5 dark:border-white/15 dark:hover:bg-white/10"
             >
               <ChevronRight size={16} />
             </button>
@@ -47,7 +47,7 @@ export function ReviewsSection() {
           <div className="flex gap-5">
             {reviews.map((r) => (
               <div key={r.id} className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_48%] lg:flex-[0_0_32%]">
-                <div className="flex h-full flex-col rounded-2xl border border-black/[0.06] bg-white/60 p-6 dark:border-white/[0.08] dark:bg-white/[0.03]">
+                <div className="flex h-full flex-col rounded-2xl border border-black/[0.06] bg-secondary p-6 dark:border-white/[0.08] dark:bg-white/[0.03]">
                   <Quote className="text-ink dark:text-chrome" size={26} />
                   <p className="mt-4 flex-1 text-sm leading-relaxed text-current/75">"{r.quote}"</p>
                   <div className="mt-6 flex items-center gap-3">

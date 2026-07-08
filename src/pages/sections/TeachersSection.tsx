@@ -17,7 +17,7 @@ export function TeachersSection() {
         <StaggerGroup className="mt-14 grid grid-cols-2 gap-5 lg:grid-cols-4">
           {teachers.map((tc) => (
             <StaggerItem key={tc.id}>
-              <div className="group overflow-hidden rounded-2xl border border-black/[0.06] bg-white/60 dark:border-white/[0.08] dark:bg-white/[0.03]">
+              <div className="group overflow-hidden rounded-2xl  bg-secondary dark:border-white/[0.08] dark:bg-white/[0.03]">
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
                     src={tc.image}

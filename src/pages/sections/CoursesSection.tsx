@@ -18,7 +18,7 @@ export function CoursesSection() {
         <StaggerGroup className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {courses.map((c) => (
             <StaggerItem key={c.id}>
-              <div className="group relative h-full overflow-hidden rounded-3xl border border-black/[0.06] bg-white/60 p-1 transition hover:shadow-xl dark:border-white/[0.08] dark:bg-white/[0.03]">
+              <div className="group relative h-full overflow-hidden rounded-3xl p-1 transition  border border-current/10 hover:shadow-xl bg-coolGray dark:bg-white/[0.03] ">
                 <div className="relative h-44 overflow-hidden rounded-[20px]">
                   <img
                     src={c.image}
@@ -28,8 +28,7 @@ export function CoursesSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0" />
                   <span className="absolute left-4 top-4 text-2xl">{c.flag}</span>
                   <span
-                    className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full font-display text-sm font-semibold text-ink"
-                    style={{ backgroundColor: c.color }}
+                    className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full font-display text-sm font-semibold text-ink "
                   >
                     {c.glyph}
                   </span>

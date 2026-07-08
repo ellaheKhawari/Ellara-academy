@@ -107,6 +107,9 @@ const en = {
         privacy: "Privacy",
         terms: "Terms",
     },
+glassGlobal:{
+    label:"5 Languages, 1 World"
+},
   auth: {
     loginTitle: "Welcome back",
     loginSubtitle: "Log in to continue your learning streak.",
@@ -150,8 +153,8 @@ const en = {
     recentHomework: "Recent Homework",
   },
   loading: "Preparing your lesson…",
-};
-
+}
+;
 
 export default en;
 export type Dictionary = typeof en;
