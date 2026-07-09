@@ -1,3 +1,5 @@
+import type {LanguageId} from "@/types";
+
 export const courses = [
   {
     id: "en",
@@ -83,69 +85,115 @@ export const sampleSessions = [
 ];
 
 export const reviews = [
-  {
-    id: 1,
-    name: "Maya Feldman",
-    course: "Spanish",
-    rating: 5,
-    quote: "The live sessions made it click in a way apps never did. My instructor noticed patterns in my mistakes that I never would have caught alone.",
-    avatar: "https://i.pravatar.cc/100?img=32",
-  },
-  {
-    id: 2,
-    name: "Daniel Cho",
-    course: "Korean",
-    rating: 5,
-    quote: "I went from barely reading Hangul to holding a ten-minute conversation in about three months. The dashboard kept me honest about practice time.",
-    avatar: "https://i.pravatar.cc/100?img=13",
-  },
-  {
-    id: 3,
-    name: "Amira Haddad",
-    course: "Persian",
-    rating: 5,
-    quote: "Hard to find good Persian instruction anywhere else. The small class sizes meant I actually got to speak every single session.",
-    avatar: "https://i.pravatar.cc/100?img=47",
-  },
-  {
-    id: 4,
-    name: "Lucas Berger",
-    course: "Chinese",
-    rating: 4,
-    quote: "Recordings of every session saved me when work traveled. I never fell behind even during a rough month.",
-    avatar: "https://i.pravatar.cc/100?img=8",
-  },
+    {
+        id: 1,
+        name: "Maya Feldman",
+        courseId: "es" as LanguageId,
+        rating: 5,
+        quote: {
+            en: "The live sessions made it click in a way apps never did. My instructor noticed patterns in my mistakes that I never would have caught alone.",
+            fa: "جلسات زنده باعث شد چیزهایی برام جا بیفته که هیچ اپلیکیشنی نتونسته بود. استادم الگوهایی تو اشتباهاتم پیدا کرد که خودم به‌تنهایی هیچ‌وقت متوجهشون نمی‌شدم.",
+        },
+        avatar: "https://i.pravatar.cc/100?img=32",
+    },
+    {
+        id: 2,
+        name: "Daniel Cho",
+        courseId: "ko" as LanguageId,
+        rating: 5,
+        quote: {
+            en: "I went from barely reading Hangul to holding a ten-minute conversation in about three months. The dashboard kept me honest about practice time.",
+            fa: "تو حدود سه ماه از به‌سختی خوندن هانگول رسیدم به یه گفتگوی ده‌دقیقه‌ای. پنل کاربری هم کمکم کرد نسبت به زمان تمرینم صادق بمونم.",
+        },
+        avatar: "https://i.pravatar.cc/100?img=13",
+    },
+    {
+        id: 3,
+        name: "Amira Haddad",
+        courseId: "fa" as LanguageId,
+        rating: 5,
+        quote: {
+            en: "Hard to find good Persian instruction anywhere else. The small class sizes meant I actually got to speak every single session.",
+            fa: "پیدا کردن آموزش خوب فارسی جای دیگه‌ای واقعاً سخته. کلاس‌های کوچیک باعث شد تو هر جلسه واقعاً فرصت صحبت‌کردن داشته باشم.",
+        },
+        avatar: "https://i.pravatar.cc/100?img=47",
+    },
+    {
+        id: 4,
+        name: "Lucas Berger",
+        courseId: "zh" as LanguageId,
+        rating: 4,
+        quote: {
+            en: "Recordings of every session saved me when work traveled. I never fell behind even during a rough month.",
+            fa: "ضبط هر جلسه وقتی سفرهای کاری داشتم نجاتم داد. حتی تو یه ماه سخت هم هیچ‌وقت از بقیه عقب نیفتادم.",
+        },
+        avatar: "https://i.pravatar.cc/100?img=8",
+    },
+    {
+        id: 5,
+        name: "Ali Mohammadi",
+        courseId: "fa" as LanguageId,
+        rating: 5,
+        quote: {
+            en: "Hard to find good Persian instruction anywhere else. The small class sizes meant I actually got to speak every single session.",
+            fa: "پیدا کردن آموزش خوب فارسی جای دیگه‌ای واقعاً سخته. کلاس‌های کوچیک باعث شد تو هر جلسه واقعاً فرصت صحبت‌کردن داشته باشم.",
+        },
+        avatar: "https://i.pravatar.cc/100?img=47",
+    },
+    {
+        id: 6,
+        name: "Lisa Grande",
+        courseId: "zh" as LanguageId,
+        rating: 4,
+        quote: {
+            en: "Recordings of every session saved me when work traveled. I never fell behind even during a rough month.",
+            fa: "ضبط هر جلسه وقتی سفرهای کاری داشتم نجاتم داد. حتی تو یه ماه سخت هم هیچ‌وقت از بقیه عقب نیفتادم.",
+        },
+        avatar: "https://i.pravatar.cc/100?img=8",
+    },
 ];
 
 export const teachers = [
-  {
-    id: 1,
-    name: "Sofia Martinez",
-    course: "Spanish",
-    bio: "Native speaker, 8 years teaching conversational Spanish.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
-  },
-  {
-    id: 2,
-    name: "Wei Zhang",
-    course: "Chinese",
-    bio: "Certified HSK examiner and Mandarin phonetics specialist.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop",
-  },
-  {
-    id: 3,
-    name: "Ji-ho Park",
-    course: "Korean",
-    bio: "Former TOPIK instructor, focuses on real-life fluency.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop",
-  },
-  {
-    id: 4,
-    name: "Leyla Ahmadi",
-    course: "Persian",
-    bio: "Bilingual instructor specializing in heritage learners.",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop",
-  },
+    {
+        id: 1,
+        name: "Sofia Martinez",
+        courseId: "es" as LanguageId,
+        bio: {
+            en: "Native speaker, 8 years teaching conversational Spanish.",
+            fa: "زبان مادری‌اش اسپانیایی است، ۸ سال سابقه‌ی تدریس مکالمه‌ی اسپانیایی دارد.",
+        },
+        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
+    },
+    {
+        id: 2,
+        name: "Wei Zhang",
+        courseId: "zh" as LanguageId,
+        bio: {
+            en: "Certified HSK examiner and Mandarin phonetics specialist.",
+            fa: "ممتحن رسمی آزمون HSK و متخصص آواشناسی زبان چینی ماندارین است.",
+        },
+        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop",
+    },
+    {
+        id: 3,
+        name: "Ji-ho Park",
+        courseId: "ko" as LanguageId,
+        bio: {
+            en: "Former TOPIK instructor, focuses on real-life fluency.",
+            fa: "مدرس سابق آزمون TOPIK، تمرکزش روی روان‌صحبت‌کردن در موقعیت‌های واقعی است.",
+        },
+        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop",
+    },
+    {
+        id: 4,
+        name: "Leyla Ahmadi",
+        courseId: "fa" as LanguageId,
+        bio: {
+            en: "Bilingual instructor specializing in heritage learners.",
+            fa: "مدرس دوزبانه با تخصص در آموزش فارسی‌آموزانی که ریشه‌ی خانوادگی فارسی دارند.",
+        },
+        image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=600&auto=format&fit=crop",
+    },
 ];
 
 export const weeklyProgress = [

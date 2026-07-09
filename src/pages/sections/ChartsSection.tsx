@@ -77,7 +77,7 @@ export function ChartsSection() {
 
           <ScrollReveal>
             <div className="h-full rounded-2xl border border-black/[0.06] bg-white/60 p-6 dark:border-white/[0.08] dark:bg-white/[0.03]">
-              <p className="text-sm font-medium">Skill Breakdown</p>
+              <p className="text-sm font-medium">{t.charts.skill}</p>
               <div className="mt-2 h-56">
                 <ResponsiveContainer width="100%" height="100%">
                   <RadarChart data={skillBreakdown} outerRadius="70%">

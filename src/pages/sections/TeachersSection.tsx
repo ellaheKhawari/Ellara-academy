@@ -3,7 +3,7 @@ import { ScrollReveal, StaggerGroup, StaggerItem } from "@/components/ui/ScrollR
 import { teachers } from "@/lib/mockData.ts";
 
 export function TeachersSection() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <section id="teachers" className="bg-cream py-24 dark:bg-ink">
@@ -27,10 +27,9 @@ export function TeachersSection() {
                 </div>
                 <div className="p-4">
                   <h3 className="font-display text-base font-semibold">{tc.name}</h3>
-                  <p className="text-xs font-medium text-ink dark:text-chrome">{tc.course}</p>
-                  <p className="mt-2 text-xs leading-relaxed text-current/55">{tc.bio}</p>
+                    <p className="text-xs font-medium text-gold">{t.languages[tc.courseId]}</p>
+                    <p className="mt-2 text-xs leading-relaxed text-current/55">{tc.bio[locale]}</p> </div>
                 </div>
-              </div>
             </StaggerItem>
           ))}
         </StaggerGroup>

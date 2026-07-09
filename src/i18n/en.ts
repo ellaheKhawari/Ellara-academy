@@ -66,6 +66,14 @@ const en = {
     eyebrow: "Student Voices",
     title: "Learners who kept showing up",
     subtitle: "A few words from students across our five language tracks.",
+    trackLabel: "{lang} track",
+  },
+  languages: {
+    en: "English",
+    zh: "Chinese",
+    ko: "Korean",
+    es: "Spanish",
+    fa: "Persian",
   },
   teachers: {
     eyebrow: "Meet the Instructors",
@@ -79,6 +87,7 @@ const en = {
     fluency: "Average Fluency Score",
     retention: "Weekly Retention",
     hours: "Hours studied per week",
+    skill: "Skill Breakdown",
   },
   faq: {
     eyebrow: "Frequently Asked Questions",

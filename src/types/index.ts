@@ -25,6 +25,4 @@ export interface AuthResponse {
   token: string;
 }
 
-export interface Links{
-
-}
+export type LanguageId = "en" | "zh" | "ko" | "es" | "fa";

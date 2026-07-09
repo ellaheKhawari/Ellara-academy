@@ -24,7 +24,7 @@ export function PanelSection() {
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.15} className="mx-auto mt-14 max-w-5xl">
-                    <div className="rounded-3xl border border-current/10 bg-white p-3 shadow-[0_20px_50px_-25px_rgba(20,20,21,0.25)] dark:bg-secondary dark:shadow-2xl">
+                    <div className="rounded-3xl border border-current/10 bg-white p-3 shadow-[0_20px_50px_-25px_rgba(20,20,21,0.25)] dark:bg-white/[0.03] dark:shadow-2xl">
                         <div className="rounded-2xl border border-current/10 bg-chrome/60 p-4 dark:from-current/[0.06] dark:to-transparent dark:bg-surface sm:p-6">
                             <div className="flex items-center gap-1.5">
                                 <span className="h-2.5 w-2.5 rounded-full bg-current/15 dark:bg-current/20" />
