@@ -1,4 +1,7 @@
+import {skillBreakdown} from "@/lib/mockData.ts";
+
 const en = {
+
   nav: {
     home: "Home",
     courses: "Courses",
@@ -9,6 +12,7 @@ const en = {
     dashboard: "Dashboard",
     getStarted: "Get Started",
   },
+
   hero: {
     eyebrow: "5 languages · live instructors · real progress",
     title: "Speak a new language with real confidence",
@@ -23,6 +27,7 @@ const en = {
     stat3: "98%",
     stat3Label: "Completion Rate",
   },
+
   courses: {
     eyebrow: "Course Catalog",
     title: "Five languages, one clear path",
@@ -32,6 +37,7 @@ const en = {
     levels: "levels",
     students: "students",
   },
+
   panel: {
     eyebrow: "Student Panel",
     title: "One dashboard for your entire journey",
@@ -45,12 +51,14 @@ const en = {
     feature3Desc: "Your instructor assigns tasks based on your weak points, not a generic syllabus.",
     cta: "Preview the Dashboard",
   },
+
   sessions: {
     eyebrow: "Sample Sessions",
     title: "Sit in before you sign up",
     subtitle: "Watch short clips from real live sessions across each language track.",
     watch: "Watch clip",
   },
+
   signup: {
     eyebrow: "Enrollment",
     title: "Start your first week for free",
@@ -62,12 +70,14 @@ const en = {
     cta: "Create Free Account",
     note: "No card required. Cancel anytime.",
   },
+
   reviews: {
     eyebrow: "Student Voices",
     title: "Learners who kept showing up",
     subtitle: "A few words from students across our five language tracks.",
     trackLabel: "{lang} track",
   },
+
   languages: {
     en: "English",
     zh: "Chinese",
@@ -75,11 +85,13 @@ const en = {
     es: "Spanish",
     fa: "Persian",
   },
+
   teachers: {
     eyebrow: "Meet the Instructors",
     title: "Taught by people who love teaching",
     subtitle: "Every instructor is native or bilingual, certified, and trained in our live-session method.",
   },
+
   charts: {
     eyebrow: "By the Numbers",
     title: "Progress you can actually see",
@@ -89,6 +101,7 @@ const en = {
     hours: "Hours studied per week",
     skill: "Skill Breakdown",
   },
+
   faq: {
     eyebrow: "Frequently Asked Questions",
     title: "Still deciding? Start here.",
@@ -101,24 +114,27 @@ const en = {
     q4: "Is there a limit on the number of users or projects for each plan?",
     a4: "Individual plans cover one learner. Family and team plans support up to 6 learners with shared billing and separate dashboards for each.",
   },
-    footer: {
-        tagline: "Real instructors. Real conversations. Real progress.",
-        rights: "All rights reserved.",
-        company: "Company",
-        resources: "Resources",
-        legal: "Legal",
-        about: "About",
-        careers: "Careers",
-        blog: "Blog",
-        courses: "Courses",
-        teachers: "Teachers",
-        helpCenter: "Help center",
-        privacy: "Privacy",
-        terms: "Terms",
-    },
+
+ footer: {
+   tagline: "Real instructors. Real conversations. Real progress.",
+   rights: "All rights reserved.",
+   company: "Company",
+   resources: "Resources",
+   legal: "Legal",
+   about: "About",
+   careers: "Careers",
+   blog: "Blog",
+   courses: "Courses",
+   teachers: "Teachers",
+   helpCenter: "Help center",
+   privacy: "Privacy",
+   terms: "Terms",
+ },
+
 glassGlobal:{
     label:"5 Languages, 1 World"
 },
+
   auth: {
     loginTitle: "Welcome back",
     loginSubtitle: "Log in to continue your learning streak.",
@@ -155,6 +171,7 @@ glassGlobal:{
     marketingTitle: "Five languages. One calm place to learn them.",
     marketingSubtitle: "Join thousands of learners tracking real progress with live instructors every week.",
   },
+
   dashboard: {
     overview: "Overview",
     myCourses: "My Courses",
@@ -168,11 +185,29 @@ glassGlobal:{
     currentStreak: "Current Streak",
     days: "days",
     nextSession: "Next Live Session",
+    nextSessionValue: "{day}, {time}",
     weeklyProgress: "Weekly Progress",
     skillBreakdown: "Skill Breakdown",
     upcoming: "Upcoming Sessions",
     recentHomework: "Recent Homework",
+    hoursStudied: "Hours studied this week",
+    fluencyScore: "Fluency Score",
+    sessionsCompleted: "Sessions Completed",
+    today: "Today",
+    columnAssignment: "Assignment",
+    columnStatus: "Status",
+    columnScore: "Score",
+    statusGraded: "Graded",
+    statusPending: "Pending review",
   },
+
+  skillBreakdown:{
+      label1:"Speaking" ,
+      label2:"Listening",
+      label3: "Reading" ,
+      label4:"Writing",
+  },
+
   loading: "Preparing your lesson…",
 }
 ;

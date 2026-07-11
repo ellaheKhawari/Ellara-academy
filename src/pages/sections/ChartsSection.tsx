@@ -26,6 +26,7 @@ const tooltipStyle = {
 
 export function ChartsSection() {
   const { t } = useLanguage();
+  const localizedSkills = skillBreakdown.map((s) => ({ skill: t.skillBreakdown[s.key], value: s.value }));
 
   return (
     <section className="bg-cream py-24 dark:bg-ink">
@@ -80,7 +81,7 @@ export function ChartsSection() {
               <p className="text-sm font-medium">{t.charts.skill}</p>
               <div className="mt-2 h-56">
                 <ResponsiveContainer width="100%" height="100%">
-                  <RadarChart data={skillBreakdown} outerRadius="70%">
+                    <RadarChart data={localizedSkills} outerRadius="70%">
                     <PolarGrid stroke="#9295A0" strokeOpacity={0.3} />
                     <PolarAngleAxis dataKey="skill" tick={{ fontSize: 11, fill: "#9295A0" }} />
                     <Radar dataKey="value" stroke="#B47DE0" fill="#B47DE0" fillOpacity={0.4} />

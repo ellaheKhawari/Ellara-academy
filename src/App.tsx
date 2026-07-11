@@ -7,6 +7,7 @@ import { queryClient } from "@/app/queryClient";
 import { LanguageProvider } from "@/i18n/LanguageProvider";
 import { AppRouter } from "@/routes/AppRouter";
 import { LoadingPage } from "@/components/ui/LoadingPage";
+import {MuiThemeBridge} from "@/providers/MuiThemeBridge.tsx";
 
 export default function App() {
   const [booting, setBooting] = useState(true);
@@ -20,9 +21,11 @@ export default function App() {
     <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
       <QueryClientProvider client={queryClient}>
         <LanguageProvider>
-          <AnimatePresence mode="wait">{booting && <LoadingPage key="boot" />}</AnimatePresence>
-          {!booting && <AppRouter />}
-          <Toaster richColors position="top-center" />
+            <MuiThemeBridge>
+                <AnimatePresence mode="wait">{booting && <LoadingPage key="boot" />}</AnimatePresence>
+                {!booting && <AppRouter />}
+                <Toaster richColors position="top-center" />
+            </MuiThemeBridge>
         </LanguageProvider>
       </QueryClientProvider>
     </ThemeProvider>

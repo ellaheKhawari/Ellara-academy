@@ -227,20 +227,35 @@ export const hoursStudied = [
 ];
 
 export const skillBreakdown = [
-  { skill: "Speaking", value: 78 },
-  { skill: "Listening", value: 85 },
-  { skill: "Reading", value: 91 },
-  { skill: "Writing", value: 66 },
-];
+    { key: "label1", value: 78 },
+    { key: "label2", value: 85 },
+    { key: "label3", value: 91 },
+    { key: "label4", value: 66 },
+] as const;
 
 export const upcomingSessions = [
-  { id: 1, title: "Conversational Spanish — Unit 7", time: "Today, 6:00 PM", instructor: "Sofia Martinez" },
-  { id: 2, title: "Grammar Clinic: Subjunctive", time: "Wed, 5:00 PM", instructor: "Sofia Martinez" },
-  { id: 3, title: "Group Practice Room", time: "Fri, 7:30 PM", instructor: "Community" },
+    {
+        id: 1,
+        title: { en: "Conversational Spanish — Unit 7", fa: "مکالمه اسپانیایی — بخش ۷" },
+        time: { en: "Today, 6:00 PM", fa: "امروز، ساعت ۶ بعدازظهر" },
+        instructor: "Sofia Martinez",
+    },
+    {
+        id: 2,
+        title: { en: "Grammar Clinic: Subjunctive", fa: "کارگاه دستور زبان: وجه التزامی" },
+        time: { en: "Wed, 5:00 PM", fa: "چهارشنبه، ساعت ۵ بعدازظهر" },
+        instructor: "Sofia Martinez",
+    },
+    {
+        id: 3,
+        title: { en: "Group Practice Room", fa: "اتاق تمرین گروهی" },
+        time: { en: "Fri, 7:30 PM", fa: "جمعه، ساعت ۷:۳۰ بعدازظهر" },
+        instructor: { en: "Community", fa: "انجمن" },
+    },
 ];
 
 export const recentHomework = [
-  { id: 1, title: "Unit 6 Vocabulary Quiz", status: "Graded", score: "92%" },
-  { id: 2, title: "Speaking Journal #12", status: "Pending review", score: "—" },
-  { id: 3, title: "Listening Worksheet 5B", status: "Graded", score: "87%" },
+    { id: 1, title: { en: "Unit 6 Vocabulary Quiz", fa: "آزمون واژگان بخش ۶" }, status: "graded" as const, score: 92 },
+    { id: 2, title: { en: "Speaking Journal #12", fa: "دفترچه گفتاری شماره ۱۲" }, status: "pending" as const, score: null },
+    { id: 3, title: { en: "Listening Worksheet 5B", fa: "کاربرگ شنیداری ۵ب" }, status: "graded" as const, score: 87 },
 ];

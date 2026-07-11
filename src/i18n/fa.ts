@@ -1,6 +1,7 @@
 import type { Dictionary } from "./en";
 
 const fa: Dictionary = {
+
   nav: {
     home: "خانه",
     courses: "دوره‌ها",
@@ -11,6 +12,7 @@ const fa: Dictionary = {
     dashboard: "پنل کاربری",
     getStarted: "شروع کنید",
   },
+
   hero: {
     eyebrow: "۵ زبان · اساتید زنده · پیشرفت واقعی",
     title: "یک زبان جدید را با اعتماد‌به‌نفس واقعی یاد بگیرید",
@@ -25,6 +27,7 @@ const fa: Dictionary = {
     stat3: "٪۹۸",
     stat3Label: "نرخ تکمیل دوره",
   },
+
   courses: {
     eyebrow: "فهرست دوره‌ها",
     title: "پنج زبان، یک مسیر روشن",
@@ -33,6 +36,7 @@ const fa: Dictionary = {
     levels: "سطح",
     students: "دانش‌آموز",
   },
+
   panel: {
     eyebrow: "پنل دانش‌آموز",
     title: "یک پنل برای کل مسیر یادگیری شما",
@@ -45,12 +49,14 @@ const fa: Dictionary = {
     feature3Desc: "استاد شما تکالیف را بر اساس نقاط ضعف شما تعیین می‌کند، نه یک سرفصل عمومی.",
     cta: "پیش‌نمایش پنل",
   },
+
   sessions: {
     eyebrow: "جلسات نمونه",
     title: "قبل از ثبت‌نام یک جلسه را ببینید",
     subtitle: "کلیپ‌های کوتاهی از جلسات زنده واقعی در هر مسیر زبانی را تماشا کنید.",
     watch: "تماشای کلیپ",
   },
+
   signup: {
     eyebrow: "ثبت‌نام",
     title: "اولین هفته را رایگان شروع کنید",
@@ -61,12 +67,14 @@ const fa: Dictionary = {
     cta: "ساخت حساب رایگان",
     note: "نیازی به کارت بانکی نیست. هر زمان می‌توانید لغو کنید.",
   },
+
   reviews: {
     eyebrow: "نظرات دانش‌آموزان",
     title: "زبان‌آموزانی که ادامه دادند",
     subtitle: "چند جمله از دانش‌آموزان ما در پنج مسیر زبانی.",
     trackLabel: "مسیر {lang}",
   },
+
   languages: {
     en: "انگلیسی",
     zh: "چینی",
@@ -74,11 +82,13 @@ const fa: Dictionary = {
     es: "اسپانیایی",
     fa: "فارسی",
   },
+
   teachers: {
     eyebrow: "با اساتید آشنا شوید",
     title: "آموزش توسط کسانی که تدریس را دوست دارند",
     subtitle: "هر استاد بومی یا دوزبانه، دارای مدرک و آموزش‌دیده در روش جلسات زنده ماست.",
   },
+
   charts: {
     eyebrow: "در یک نگاه آماری",
     title: "پیشرفتی که واقعاً می‌بینید",
@@ -88,6 +98,7 @@ const fa: Dictionary = {
     hours: "ساعات مطالعه در هفته",
     skill: "تفکیک مهارت ها"
   },
+
   faq: {
     eyebrow: "سوالات متداول",
     title: "هنوز مطمئن نیستید؟ از اینجا شروع کنید",
@@ -100,10 +111,12 @@ const fa: Dictionary = {
     q4: "آیا محدودیتی برای تعداد کاربران یا پروژه‌ها در هر پلن وجود دارد؟",
     a4: "پلن فردی برای یک زبان‌آموز است. پلن‌های خانوادگی و گروهی تا ۶ زبان‌آموز با پنل‌های جداگانه را پشتیبانی می‌کنند.",
   },
-glassGlobal:{
+
+  glassGlobal:{
    label:"۵ زبان، ۱ جهان"
 },
-    footer: {
+
+  footer: {
         tagline: "اساتید واقعی. گفتگوهای واقعی. پیشرفت واقعی.",
         rights: "تمامی حقوق محفوظ است.",
         company: "شرکت",
@@ -118,6 +131,7 @@ glassGlobal:{
         privacy: "حریم خصوصی",
         terms: "شرایط",
     },
+
   auth: {
     loginTitle: "خوش برگشتید",
     loginSubtitle: "برای ادامه یادگیری وارد شوید.",
@@ -154,6 +168,7 @@ glassGlobal:{
     marketingTitle: "پنج زبان. یک فضای آرام برای یادگیریشان.",
     marketingSubtitle: "به هزاران زبان‌آموزی بپیوندید که هر هفته با اساتید زنده پیشرفت واقعی خود را دنبال می‌کنند.",
   },
+
   dashboard: {
     overview: "نمای کلی",
     myCourses: "دوره‌های من",
@@ -167,12 +182,31 @@ glassGlobal:{
     currentStreak: "روزهای پی‌درپی",
     days: "روز",
     nextSession: "جلسه زنده بعدی",
+    nextSessionValue: "{day}، ساعت {time}",
     weeklyProgress: "پیشرفت هفتگی",
     skillBreakdown: "تفکیک مهارت‌ها",
     upcoming: "جلسات پیش‌رو",
     recentHomework: "تکالیف اخیر",
+    hoursStudied: "ساعات مطالعه این هفته",
+    fluencyScore: "امتیاز روانی",
+    sessionsCompleted: "جلسات تکیمل شده",
+    today:"امروز",
+    columnAssignment: "تکلیف",
+    columnStatus: "وضعیت",
+    columnScore: "نمره",
+    statusGraded: "نمره داده شده",
+    statusPending: "در انتظار بررسی",
   },
-  loading: "در حال آماده‌سازی درس شما…",
+
+   skillBreakdown:{
+      label1:"مهارت گفتاری" ,
+      label2:"مهارت شنیداری",
+      label3: "مهارت خوانش" ,
+      label4:"مهارت نوشتاری",
+   },
+
+    loading: "در حال آماده‌سازی درس شما…",
+
 }
 ;
 export default fa;
