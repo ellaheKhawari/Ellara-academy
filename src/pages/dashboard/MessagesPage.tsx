@@ -8,7 +8,7 @@ export function MessagesPage() {
     <div>
       <ScrollReveal>
         <h1 className="font-display text-2xl font-semibold sm:text-3xl">{t.dashboard.messages}</h1>
-        <p className="mt-1 text-sm text-current/60">Direct messages with your instructors.</p>
+        <p className="mt-1 text-sm text-current/60">{t.dashboard.p2}</p>
       </ScrollReveal>
       <ScrollReveal delay={0.1}>
         <div className="mt-7 flex flex-col items-center justify-center rounded-2xl border border-dashed border-black/15 py-24 text-center dark:border-white/15">

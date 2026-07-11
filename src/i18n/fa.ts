@@ -196,14 +196,35 @@ const fa: Dictionary = {
     columnScore: "نمره",
     statusGraded: "نمره داده شده",
     statusPending: "در انتظار بررسی",
+    p1 :"مسیرهای یادگیری شما",
+    p2 : "گفتگو با اساتید",
+    p3 :"تکالیف و وضعیت بررسی آن‌ها",
+    p4 :"کلاس‌های پیشِ رو و اتاق‌های تمرین",
+    p5 :"ویرایش اطلاعات پروفایل",
+    myCoursesSubtitle: "دوره‌های فعال و در دسترس شما.",
+    scheduleSubtitle: "جلسات زنده و اتاق‌های تمرین پیش‌روی شما.",
+    active: "فعال",
+    levelsLabel: "سطح",
+    studentsLabel: "دانش‌آموز",
+    notEnrolled: "ثبت‌نام نشده",
+    progressLabel: "٪{percent} از سطح {level}",
+    join: "پیوستن",
   },
 
-   skillBreakdown:{
+  skillBreakdown:{
       label1:"مهارت گفتاری" ,
       label2:"مهارت شنیداری",
       label3: "مهارت خوانش" ,
       label4:"مهارت نوشتاری",
    },
+
+ coursesPage:{
+     name1:"انگلیسی" ,
+     name2:"چینی",
+     name3:"کره ای",
+     name4:"اسپانیایی",
+     name5:"فارسی",
+ },
 
     loading: "در حال آماده‌سازی درس شما…",
 

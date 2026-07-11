@@ -199,6 +199,19 @@ glassGlobal:{
     columnScore: "Score",
     statusGraded: "Graded",
     statusPending: "Pending review",
+    p1:"Your active and available language tracks.",
+    p2:"Direct messages with your instructors.",
+    p3:"Assignments from your instructors, graded and pending.",
+    p4:"Your upcoming live sessions and practice rooms.",
+    p5:"Manage your profile details.",
+    myCoursesSubtitle: "Your active and available language tracks.",
+    scheduleSubtitle: "Your upcoming live sessions and practice rooms.",
+    active: "Active",
+    levelsLabel: "levels",
+    studentsLabel: "students",
+    notEnrolled: "Not enrolled",
+    progressLabel: "{percent}% through Level {level}",
+    join: "Join",
   },
 
   skillBreakdown:{
@@ -206,6 +219,14 @@ glassGlobal:{
       label2:"Listening",
       label3: "Reading" ,
       label4:"Writing",
+  },
+
+  coursesPage:{
+      name1:"English" ,
+      name2:"Chinese",
+      name3:"Korean",
+      name4:"Spanish",
+      name5:"Persian",
   },
 
   loading: "Preparing your lesson…",

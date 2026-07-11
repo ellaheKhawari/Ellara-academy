@@ -31,7 +31,7 @@ export function HomeworkPage() {
         <div>
             <ScrollReveal>
                 <h1 className="font-display text-2xl font-semibold sm:text-3xl">{t.dashboard.homework}</h1>
-                <p className="mt-1 text-sm text-current/60">Assignments from your instructors, graded and pending.</p>
+                <p className="mt-1 text-sm text-current/60">{t.dashboard.p3}</p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.1}>

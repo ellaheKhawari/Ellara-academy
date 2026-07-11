@@ -5,14 +5,15 @@ import { useLanguage } from "@/i18n/LanguageProvider.tsx";
 import { ScrollReveal } from "@/components/ui/ScrollReveal.tsx";
 import { Input, Label } from "@/components/ui/Input.tsx";
 import { Button } from "@/components/ui/Button.tsx";
-import { courses } from "@/lib/mockData.ts";
+import { courses  } from "@/lib/mockData.ts";
+import type {LanguageId} from "@/types/index.ts"
 
 export function SignupSection() {
     const { t } = useLanguage();
     const navigate = useNavigate();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [language, setLanguage] = useState(courses[0].id);
+    const [language, setLanguage] = useState<LanguageId>(courses[0].id);
 
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault();

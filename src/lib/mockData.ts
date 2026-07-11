@@ -5,7 +5,7 @@ export const courses = [
         id: "en",
         flag: "🇬🇧",
         glyph: "A",
-        name: "English",
+        name: "name1",
         levels: 6,
         students: 4820,
         color: "#5B8DEF",
@@ -16,7 +16,7 @@ export const courses = [
         id: "zh",
         flag: "🇨🇳",
         glyph: "文",
-        name: "Chinese",
+        name: "name2",
         levels: 5,
         students: 2310,
         color: "#E0645B",
@@ -27,7 +27,7 @@ export const courses = [
         id: "ko",
         flag: "🇰🇷",
         glyph: "한",
-        name: "Korean",
+        name: "name3",
         levels: 5,
         students: 2075,
         color: "#7DE0D3",
@@ -38,7 +38,7 @@ export const courses = [
         id: "es",
         flag: "🇪🇸",
         glyph: "Ñ",
-        name: "Spanish",
+        name: "name4",
         levels: 6,
         students: 2680,
         color: "#E5E4E0",
@@ -49,14 +49,14 @@ export const courses = [
         id: "fa",
         flag: "🇮🇷",
         glyph: "ف",
-        name: "Persian",
+        name: "name5",
         levels: 4,
         students: 615,
         color: "#B47DE0",
         colorLight: "#9558C9",
         image: "https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=800&auto=format&fit=crop",
     },
-];
+] as const ;
 
 export const sampleSessions = [
   {
