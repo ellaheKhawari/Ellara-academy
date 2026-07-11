@@ -1,7 +1,5 @@
 import type { AuthResponse, LoginPayload, RegisterPayload, User } from "@/types";
 
-// --- Mock "database" -------------------------------------------------------
-
 interface StoredUser extends User {
   password: string;
 }
@@ -64,8 +62,6 @@ function toPublicUser(u: StoredUser): User {
   void _password;
   return rest;
 }
-
-// --- Simulated backend endpoints -------------------------------------------
 
 export const authApi = {
   async login(payload: LoginPayload): Promise<AuthResponse> {

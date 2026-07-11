@@ -47,9 +47,9 @@ export function DashboardLayout() {
 
   const sidebarContent = (
     <>
-      <div className="flex items-center gap-2 px-1 font-display text-lg font-semibold">
-        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-chrome text-sm text-ink">L</span>
-        Lingova
+      <div className="flex items-center gap-2 px-1 font-constant text-lg font-semibold">
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-sm text-cream dark:bg-chrome dark:text-ink">E</span>
+          Ellara Academy
       </div>
 
       <nav className="mt-8 flex flex-1 flex-col gap-1">
@@ -117,7 +117,7 @@ export function DashboardLayout() {
       <div className="flex flex-1 flex-col">
         <header className="flex h-16 items-center justify-between border-b border-black/[0.06] px-5 lg:hidden dark:border-white/[0.08]">
           <div className="flex items-center gap-2 font-display text-lg font-semibold">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-chrome text-sm text-ink">L</span>
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-chrome text-sm text-ink">E</span>
               Ellara Academy
           </div>
           <button onClick={() => setMobileOpen(true)} aria-label="Open menu">

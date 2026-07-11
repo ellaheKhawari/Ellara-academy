@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { authRepository } from "@/services/repositories/authRepository";
 import { useAuthStore } from "@/store/authStore";
 import type { LoginPayload, RegisterPayload } from "@/types";
+import {useEffect, useState} from "react";
 
 export const ME_QUERY_KEY = ["auth", "me"];
 
@@ -73,4 +74,22 @@ export function useLogout() {
       queryClient.removeQueries({ queryKey: ME_QUERY_KEY });
     },
   });
+}
+
+export function useIsDarkMode() {
+    const [isDark, setIsDark] = useState(
+        () => typeof document !== "undefined" && document.documentElement.classList.contains("dark")
+    );
+
+    useEffect(() => {
+        const root = document.documentElement;
+        const update = () => setIsDark(root.classList.contains("dark"));
+        update();
+
+        const observer = new MutationObserver(update);
+        observer.observe(root, { attributes: true, attributeFilter: ["class"] });
+        return () => observer.disconnect();
+    }, []);
+
+    return isDark;
 }
