@@ -11,7 +11,14 @@ import {MuiThemeBridge} from "@/providers/MuiThemeBridge.tsx";
 
 export default function App() {
   const [booting, setBooting] = useState(true);
-
+  useEffect(() => {
+     Promise.all([
+        document.fonts.load('900 1em IRANRounded'),
+        document.fonts.load('900 1em IranYekan'),
+     ]).then(() => {
+         document.documentElement.classList.add('fonts-ready');
+     });
+  }, []);
   useEffect(() => {
     const timeout = setTimeout(() => setBooting(false), 1100);
     return () => clearTimeout(timeout);
