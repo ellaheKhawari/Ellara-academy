@@ -13,7 +13,7 @@ export function MessagesPage() {
       <ScrollReveal delay={0.1}>
         <div className="mt-7 flex flex-col items-center justify-center rounded-2xl border border-dashed border-black/15 py-24 text-center dark:border-white/15">
           <MessageSquare size={28} className="text-current/30" />
-          <p className="mt-3 text-sm text-current/50">No messages yet — your instructor will reach out after your first session.</p>
+          <p className="mt-3 text-sm text-current/50">{t.massagesPage.massage}</p>
         </div>
       </ScrollReveal>
     </div>

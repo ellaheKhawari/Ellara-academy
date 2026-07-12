@@ -229,6 +229,15 @@ glassGlobal:{
       name5:"Persian",
   },
 
+  massagesPage:{
+      massage:"No messages yet — your instructor will reach out after your first session."
+  },
+
+  settingsPage:{
+      save: "Save",
+      since: "Member since",
+  },
+
   loading: "Preparing your lesson…",
 }
 ;

@@ -3,9 +3,10 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Input, Label } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import { useLanguage } from "@/i18n/LanguageProvider";
+import { formatDate } from "@/lib/formatNumber.ts";
 
 export function SettingsPage() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const user = useAuthStore((s) => s.user);
 
   return (
@@ -22,7 +23,7 @@ export function SettingsPage() {
             <div>
               <p className="font-medium">{user?.fullName}</p>
               <p className="text-xs text-current/50">
-                Member since {user ? new Date(user.joinedAt).toLocaleDateString() : ""}
+                  {t.settingsPage.since} {user ? formatDate(user.joinedAt, locale) : ""}
               </p>
             </div>
           </div>
@@ -37,7 +38,7 @@ export function SettingsPage() {
               <Input defaultValue={user?.email} type="email" />
             </div>
             <Button className="w-full" size="lg">
-              Save changes
+                {t.settingsPage.save}
             </Button>
           </div>
         </div>
