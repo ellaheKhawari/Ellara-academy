@@ -45,12 +45,14 @@ export function DashboardLayout() {
     navigate("/");
   }
 
+  const isRtl = locale === "fa";
+
   const sidebarContent = (
     <>
-      <div className="flex items-center gap-2 px-1 font-constant text-lg font-semibold">
-        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-sm text-cream dark:bg-chrome dark:text-ink">E</span>
-          Ellara Academy
-      </div>
+        <div dir="ltr" className="flex items-center gap-2 px-1 font-constant text-lg font-semibold">
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-sm text-cream dark:bg-chrome dark:text-ink">E</span>
+            Ellara Academy
+        </div>
 
       <nav className="mt-8 flex flex-1 flex-col gap-1">
         {navItems.map((item) => (
@@ -115,25 +117,25 @@ export function DashboardLayout() {
       </aside>
 
       <div className="flex flex-1 flex-col">
-        <header className="flex h-16 items-center justify-between border-b border-black/[0.06] px-5 lg:hidden dark:border-white/[0.08]">
-          <div className="flex items-center gap-2 font-display text-lg font-semibold">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-chrome text-sm text-ink">E</span>
-              Ellara Academy
-          </div>
-          <button onClick={() => setMobileOpen(true)} aria-label="Open menu">
-            <Menu size={22} />
-          </button>
-        </header>
+          <header className="flex h-16 items-center justify-between border-b border-black/[0.06] px-5 lg:hidden dark:border-white/[0.08]">
+              <button onClick={() => setMobileOpen(true)} aria-label="Open menu">
+                  <Menu size={22} />
+              </button>
+              <div dir="ltr" className="flex items-center gap-2 font-constant text-lg font-semibold">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink text-sm text-cream dark:bg-chrome dark:text-ink">E</span>
+                  Ellara Academy
+              </div>
+          </header>
 
         <AnimatePresence>
           {mobileOpen && (
-            <motion.div
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={{ type: "tween", duration: 0.25 }}
-              className="fixed inset-y-0 start-0 z-50 flex w-72 flex-col bg-cream p-5 shadow-2xl lg:hidden dark:bg-ink"
-            >
+              <motion.div
+                  initial={{ x: isRtl ? "100%" : "-100%" }}
+                  animate={{ x: 0 }}
+                  exit={{ x: isRtl ? "100%" : "-100%" }}
+                  transition={{ type: "tween", duration: 0.25 }}
+                  className="fixed inset-y-0 start-0 z-50 flex w-72 flex-col bg-cream p-5 shadow-2xl lg:hidden dark:bg-ink"
+              >
               <button onClick={() => setMobileOpen(false)} className="mb-4 self-end" aria-label="Close menu">
                 <X size={20} />
               </button>
