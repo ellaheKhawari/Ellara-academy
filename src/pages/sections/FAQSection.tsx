@@ -16,7 +16,7 @@ export function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="bg-cream py-24 dark:bg-ink">
+    <section id="faq" className="bg-cream py-14 lg:py-18  dark:bg-ink">
       <div className="mx-auto max-w-4xl px-5 md:px-8">
         <ScrollReveal className="mb-10 text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-ink dark:text-chrome">{t.faq.eyebrow}</p>

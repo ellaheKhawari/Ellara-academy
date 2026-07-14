@@ -15,7 +15,7 @@ export function PanelSection() {
     ];
 
     return (
-        <section className="bg-cream py-24 text-current dark:bg-ink">
+        <section className="bg-cream py-14 lg:py-18  text-current dark:bg-ink">
             <div className="mx-auto max-w-7xl px-5 md:px-8">
                 <ScrollReveal className="mx-auto max-w-2xl text-center">
                     <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-surface-2 dark:text-chrome-soft">{t.panel.eyebrow}</p>

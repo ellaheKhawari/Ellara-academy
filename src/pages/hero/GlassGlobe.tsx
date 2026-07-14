@@ -181,7 +181,7 @@ export function GlassGlobe() {
     return (
         <div
             ref={containerRef}
-            className="relative mx-auto aspect-square w-full max-w-[420px] animate-[float_6s_ease-in-out_infinite]"
+            className="hidden lg:block relative mx-auto aspect-square w-full max-w-[420px] animate-[float_6s_ease-in-out_infinite]"
             style={{ perspective: "1400px" }}
         >
             <div

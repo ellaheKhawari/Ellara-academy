@@ -7,7 +7,7 @@ export function SessionsSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="sessions" className="bg-cream py-24 dark:bg-ink">
+    <section id="sessions" className="bg-cream py-14 lg:py-18  dark:bg-ink">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <ScrollReveal className="max-w-2xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-ink dark:text-chrome">{t.sessions.eyebrow}</p>

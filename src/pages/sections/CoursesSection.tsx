@@ -4,10 +4,10 @@ import { ScrollReveal, StaggerGroup, StaggerItem } from "@/components/ui/ScrollR
 import { courses } from "@/lib/mockData.ts";
 
 export function CoursesSection() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
-    <section id="courses" className="bg-cream py-24 dark:bg-ink">
+    <section id="courses" className="bg-cream py-14 lg:py-18 dark:bg-ink">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <ScrollReveal className="max-w-2xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-ink dark:text-chrome">{t.courses.eyebrow}</p>
@@ -22,7 +22,7 @@ export function CoursesSection() {
                 <div className="relative h-44 overflow-hidden rounded-[20px]">
                   <img
                     src={c.image}
-                    alt={c.name}
+                    alt={t.languages[c.id]}
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0" />
@@ -34,7 +34,7 @@ export function CoursesSection() {
                   </span>
                 </div>
                 <div className="p-5">
-                  <h3 className="font-display text-lg font-semibold">{c.name}</h3>
+                  <h3 className="font-display text-lg font-semibold">{t.languages[c.id]}</h3>
                   <p className="mt-1 text-xs text-current/50">
                     {c.levels} {t.courses.levels} · {c.students.toLocaleString()} {t.courses.students}
                   </p>

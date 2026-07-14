@@ -35,6 +35,11 @@ const fa: Dictionary = {
     viewCourse: "مشاهده دوره",
     levels: "سطح",
     students: "دانش‌آموز",
+    name1:"انگلیسی" ,
+    name2:"چینی",
+    name3:"کره ای",
+    name4:"اسپانیایی",
+    name5:"فارسی",
   },
 
   panel: {
@@ -217,14 +222,6 @@ const fa: Dictionary = {
       label3: "مهارت خوانش" ,
       label4:"مهارت نوشتاری",
    },
-
- coursesPage:{
-     name1:"انگلیسی" ,
-     name2:"چینی",
-     name3:"کره ای",
-     name4:"اسپانیایی",
-     name5:"فارسی",
- },
 
  massagesPage:{
     massage:"در حال حاضر هیچ پیامی وجود ندارد، مربی شما بعد از شروع کردن فصل اولتان با شما تماس خواهد گرفت."

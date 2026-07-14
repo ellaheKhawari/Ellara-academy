@@ -14,7 +14,7 @@ export function Hero() {
   ];
 
   return (
-      <section id="hero" className="relative overflow-hidden bg-cream pb-24 pt-16 text-ink-text dark:bg-ink dark:text-cream md:pt-24">
+      <section id="hero" className="relative overflow-hidden bg-cream pb-10 pt-10 text-ink-text dark:bg-ink dark:text-cream md:pt-24 md:pb-24">
         <div
         className="pointer-events-none absolute -right-20 -top-32 h-[620px] w-[620px] rounded-full opacity-[0.14] blur-3xl"
         style={{ background: "radial-gradient(circle, rgba(255,255,255,0.9), transparent 70%)" }}
@@ -28,7 +28,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="mb-6 inline-flex items-center gap-2 rounded-full border border-current/15 bg-current/[0.06] px-4 py-1.5 text-xs font-medium tracking-wide text-current/70"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+            <span className="h-1.5 w-1.5 rounded-full bg-ink/[0.6] dark:bg-cream/[0.8]" />
             {t.hero.eyebrow}
           </motion.div>
 

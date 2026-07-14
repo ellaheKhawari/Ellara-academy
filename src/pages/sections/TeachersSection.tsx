@@ -6,7 +6,7 @@ export function TeachersSection() {
   const { t, locale } = useLanguage();
 
   return (
-    <section id="teachers" className="bg-cream py-24 dark:bg-ink">
+    <section id="teachers" className="bg-cream py-14 lg:py-18  dark:bg-ink">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <ScrollReveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-ink dark:text-chrome">{t.teachers.eyebrow}</p>

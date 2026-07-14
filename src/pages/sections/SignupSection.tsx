@@ -22,7 +22,7 @@ export function SignupSection() {
     }
 
     return (
-        <section id="signup" className="relative overflow-hidden bg-cream dark:bg-ink py-24 text-current">
+        <section id="signup" className="relative overflow-hidden bg-cream dark:bg-ink py-14 lg:py-18  text-current">
             <div
                 className="pointer-events-none absolute right-0 top-0 h-[420px] w-[420px] rounded-full opacity-25 blur-3xl"
                 style={{ background: "radial-gradient(circle, rgba(255,255,255,0.5), transparent 70%)" }}

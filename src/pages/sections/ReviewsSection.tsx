@@ -24,7 +24,7 @@ export function ReviewsSection() {
     }, [emblaApi, dir]);
 
     return (
-        <section id="reviews" className="bg-cream py-24 dark:bg-ink">
+        <section id="reviews" className="bg-cream py-14 lg:py-18  dark:bg-ink">
             <div className="mx-auto max-w-7xl px-5 md:px-8">
                 <div className="flex flex-wrap items-end justify-between gap-6">
                     <ScrollReveal className="max-w-xl">

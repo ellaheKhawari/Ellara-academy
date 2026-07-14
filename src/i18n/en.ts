@@ -36,6 +36,11 @@ const en = {
     viewCourse: "View course",
     levels: "levels",
     students: "students",
+    name1:"English" ,
+    name2:"Chinese",
+    name3:"Korean",
+    name4:"Spanish",
+    name5:"Persian",
   },
 
   panel: {
@@ -131,7 +136,7 @@ const en = {
    terms: "Terms",
  },
 
-glassGlobal:{
+ glassGlobal:{
     label:"5 Languages, 1 World"
 },
 
@@ -219,14 +224,6 @@ glassGlobal:{
       label2:"Listening",
       label3: "Reading" ,
       label4:"Writing",
-  },
-
-  coursesPage:{
-      name1:"English" ,
-      name2:"Chinese",
-      name3:"Korean",
-      name4:"Spanish",
-      name5:"Persian",
   },
 
   massagesPage:{
