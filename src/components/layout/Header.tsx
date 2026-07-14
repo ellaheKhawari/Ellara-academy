@@ -96,8 +96,8 @@ export function Header() {
                 <a
                   key={l.href}
                   href={l.href}
-                  onClick={() => setOpen(false)}
-                  className={cn("rounded-lg px-3 py-2.5 text-sm ")}
+                  onClick={() => setOpen(true)}
+                  className={cn("rounded-lg px-3 py-2.5 text-sm")}
                 >
                   {l.label}
                 </a>
