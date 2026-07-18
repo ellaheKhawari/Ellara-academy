@@ -35,7 +35,7 @@ export function MyCoursesPage() {
                                         </span>
                                     )}
                                 </div>
-                                <h3 className="mt-3 font-display text-lg font-semibold">{t.coursesPage[c.name]}</h3>
+                                <h3 className="mt-3 font-display text-lg font-semibold">{t.languages[c.id]}</h3>
                                 <p className="mt-1 text-xs text-current/50">
                                     {formatNumber(c.levels, locale)} {t.dashboard.levelsLabel} ·{" "}
                                     {formatNumber(c.students, locale)} {t.dashboard.studentsLabel}
