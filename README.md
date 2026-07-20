@@ -6,7 +6,7 @@
 
 Built with React 19, TypeScript, and Vite — featuring a marketing landing page, mock authentication flow, and an interactive student dashboard.
 
-[**🔗 Live Demo**](https://ellara-academy.netlify.app/)
+[**🔗 Live Demo**](https://ellara-academy.ellahe-khawari.workers.dev/)
 
 </div>
 
